@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Adicción a Redes Sociales</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-5">
+        <h1 class="text-3xl font-bold mb-5 text-center">Encuesta de Adicción a Redes Sociales</h1>
+
+        <form action="" method="post" id="quizForm">
+            <!-- Pregunta 1 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+
+                    <h2 class="font-bold text-xl mb-2">¿Cuánto tiempo podrías pasar sin revisar tus redes sociales antes
+                        de sentir la necesidad de hacerlo?</h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q1-O1" type="radio" value="1" name="Q1"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q1-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Puedo pasar
+                            todo el día
+                            sin revisarlas</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q1-O2" type="radio" value="2" name="Q1"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q1-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Unas
+                            pocas horas, pero luego siento la necesidad de revisarlas</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q1-O3" type="radio" value="3" name="Q1"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q1-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Menos de
+                            una hora, siempre
+                            tengo que verlas</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Cuánto te afecta no recibir notificaciones por largos periodos?
+                    </h2>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q2-O1" type="radio" value="1" name="Q2"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q2-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No
+                            me afecta, no es algo importante para mí</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q2-O2" type="radio" value="2" name="Q2"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q2-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Me
+                            inquieta un poco después de unas horas</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q2-O3" type="radio" value="3" name="Q2"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q2-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Me
+                            estreso si no recibo notificaciones por mucho tiempo</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Sientes que necesitas revisar tus redes aunque no haya nada
+                        nuevo?</h2>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q3-O1" type="radio" value="1" name="Q3"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q3-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No,
+                            solo las reviso cuando sé que hay algo</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q3-O2" type="radio" value="2" name="Q3"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q3-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">A
+                            veces reviso aunque sé que no hay nada nuevo</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q3-O3" type="radio" value="3" name="Q3"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q3-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sí,
+                            reviso constantemente aunque no haya nada nuevo</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Te comparas con personas en redes y cómo te hace sentir eso?
+                    </h2>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q4-O1" type="radio" value="1" name="Q4"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q4-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No
+                            me comparo, no me afecta lo que veo</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q4-O2" type="radio" value="2" name="Q4"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q4-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">A
+                            veces me comparo, pero no me lo tomo muy en serio</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q4-O3" type="radio" value="3" name="Q4"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q4-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sí,
+                            me comparo mucho y me hace sentir mal a veces</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Te cuesta disfrutar de actividades sin compartirlas en redes?
+                    </h2>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q5-O1" type="radio" value="1" name="Q5"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q5-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No,
+                            disfruto las cosas sin tener que compartirlas</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q5-O2" type="radio" value="2" name="Q5"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q5-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">A
+                            veces siento la necesidad de compartir, pero puedo disfrutar igual</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q5-O3" type="radio" value="3" name="Q5"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q5-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sí,
+                            no disfruto completamente si no lo comparto en redes</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Sientes la necesidad de compartir cada momento de tu vida en
+                        redes sociales?</h2>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q6-O1" type="radio" value="1" name="Q6"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q6-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No,
+                            solo comparto cosas importantes o interesantes</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q6-O2" type="radio" value="2" name="Q6"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q6-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">A
+                            veces siento la necesidad de compartir más de lo necesario</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q6-O3" type="radio" value="3" name="Q6"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q6-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sí,
+                            siento que tengo que compartir todo lo que hago</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Te has sentido desconectado del mundo real por pasar tanto
+                        tiempo en redes?</h2>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q7-O1" type="radio" value="1" name="Q7"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q7-O1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No,
+                            siempre estoy conectado con el mundo real</label>
+                    </div>
+
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q7-O2" type="radio" value="2" name="Q7"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q7-O2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">A
+                            veces me siento un poco desconectado, pero lo controlo</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q7-O3" type="radio" value="3" name="Q7"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="Q7-O3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sí,
+                            me he sentido desconectado de la realidad por estar demasiado tiempo en redes</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Estás ansioso por ir a las redes sociales?</h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q8-O1" type="radio" value="1" name="Q8"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q8-O1" class="ms-2 text-sm font-medium text-gray-900">No, prefiero desconectarme y
+                            disfrutar del momento presente.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q8-O2" type="radio" value="2" name="Q8"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q8-O2" class="ms-2 text-sm font-medium text-gray-900">Un poco, me siento abrumado
+                            por la cantidad de información, así que trato de limitar mi tiempo en redes.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q8-O3" type="radio" value="3" name="Q8"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q8-O3" class="ms-2 text-sm font-medium text-gray-900">Sí, me encanta estar al tanto
+                            de las novedades y conectar con amigos.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Buscas conectarte a Internet en todas partes para acceder a las
+                        redes sociales?
+                    </h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q9-O1" type="radio" value="1" name="Q9"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q9-O1" class="ms-2 text-sm font-medium text-gray-900">No, prefiero desconectarme de
+                            vez en cuando y disfrutar del momento sin distracciones.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q9-O2" type="radio" value="2" name="Q9"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q9-O2" class="ms-2 text-sm font-medium text-gray-900">A veces, me gusta acceder a
+                            las redes sociales, pero no es una prioridad.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q9-O3" type="radio" value="3" name="Q9"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q9-O3" class="ms-2 text-sm font-medium text-gray-900">Sí, es esencial para
+                            mantenerse actualizado con noticias y eventos en tiempo real.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Lo primero que haces cuando despiertas es conectarte a las redes
+                        sociales?
+                    </h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q10-O1" type="radio" value="1" name="Q10"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q10-O1" class="ms-2 text-sm font-medium text-gray-900">No, prefiero tomarme unos
+                            minutos para estirarme y disfrutar de un café antes de mirar mi teléfono.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q10-O2" type="radio" value="2" name="Q10"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q10-O2" class="ms-2 text-sm font-medium text-gray-900">A veces, pero solo si tengo
+                            tiempo; generalmente me concentro en planear mi día primero.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q10-O3" type="radio" value="3" name="Q10"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q10-O3" class="ms-2 text-sm font-medium text-gray-900">Sí, me gusta revisar las
+                            notificaciones y ver qué he perdido mientras dormía.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 11 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Quieres pasar el tiempo en las redes sociales cuando estas solo?
+                    </h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q11-O1" type="radio" value="1" name="Q11"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q11-O1" class="ms-2 text-sm font-medium text-gray-900">No, prefiero disfrutar de mi
+                            propia compañía sin distracciones.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q11-O2" type="radio" value="2" name="Q11"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q11-O2" class="ms-2 text-sm font-medium text-gray-900">A veces, pero prefiero hacer
+                            algo más productivo o salir a caminar.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q11-O3" type="radio" value="3" name="Q11"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q11-O3" class="ms-2 text-sm font-medium text-gray-900">Sí, me gusta desconectar y
+                            explorar contenido interesante mientras estoy solo.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 12 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Sientes que las actividades de las redes sociales se integran en
+                        tu vida cotidiana?</h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q12-O1" type="radio" value="1" name="Q12"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q12-O1" class="ms-2 text-sm font-medium text-gray-900">No, siento que puedo
+                            desconectarme fácilmente.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q12-O2" type="radio" value="2" name="Q12"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q12-O2" class="ms-2 text-sm font-medium text-gray-900">A veces, pero trato de
+                            equilibrarlo con otras actividades.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q12-O3" type="radio" value="3" name="Q12"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q12-O3" class="ms-2 text-sm font-medium text-gray-900">Sí, son parte importante de
+                            mi rutina diaria.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 13 -->
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">¿Te emociona estar en las redes sociales?</h2>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q13-O1" type="radio" value="1" name="Q13"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q13-O1" class="ms-2 text-sm font-medium text-gray-900">No, realmente no me
+                            emociona.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q13-O2" type="radio" value="2" name="Q13"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q13-O2" class="ms-2 text-sm font-medium text-gray-900">Sí, en ocasiones me
+                            emociona.</label>
+                    </div>
+                    <div class="flex items-center me-4 my-2">
+                        <input id="Q13-O3" type="radio" value="3" name="Q13"
+                            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                        <label for="Q13-O3" class="ms-2 text-sm font-medium text-gray-900">Sí, siempre me
+                            emociona.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-md mx-auto text-center">
+
+                <button type="submit"
+                    class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Guardar
+                    y continuar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+
+        document.getElementById('quizForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let totalScore = 0;
+
+
+            // Aqui se coloca el valor del atributo "name" de cada etiqueta "input" del html
+            const questions = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10', 'Q11', 'Q12', 'Q13'];
+
+            const maxPoints = questions.length * 3;
+
+
+            questions.forEach(q => {
+                const selectedOption = document.querySelector(`input[name="${q}"]:checked`);
+
+                if (selectedOption) {
+                    totalScore += parseInt(selectedOption.value);
+                }
+            });
+
+            //Cambiar el nombre del objeto "Necesidad" por el que haga referencia al tema de su formulario
+            const necesidad = totalScore;
+            const porcentajeNecesidad = parseInt(((totalScore / maxPoints) * 100));
+
+            console.log(necesidad)
+            console.log(porcentajeNecesidad)
+
+            sessionStorage.setItem('porcentajeNecesidad', porcentajeNecesidad);
+
+            // Aqui se redirije a la siguiente pestaña (en este caso se redirije a la pestaña final)
+            window.location.href = './Resultados.html';
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

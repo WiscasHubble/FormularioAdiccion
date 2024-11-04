@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Adicción a Redes Sociales</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="container mx-auto py-10 px-4 space-y-8">
+        <!-- Primera Card - Resultados de Progreso -->
+        <div class="bg-white shadow-md rounded-lg p-6 mt-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Resultados del Test</h2>
+
+            <!-- Barra de progreso: Satisfacción / Tolerancia -->
+            <div class="mb-4">
+                <div class="flex justify-between w-full">
+                    <label class="block text-blue-500 dark:text-white font-semibold">Satisfacción / Tolerancia</label>
+                    <span id="satisfaccionPorcentaje"
+                        class="text-sm font-medium text-blue-500 dark:text-white">70%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div id="satisfaccionProgressBar" class="bg-blue-500 h-4 rounded-full" style="width: 70%;"></div>
+                </div>
+            </div>
+
+
+            <!-- Barra de progreso: Problemas -->
+            <div class="mb-4">
+                <div class="flex justify-between w-full">
+                    <label class="block text-red-500 dark:text-white font-semibold">Problemas</label>
+                    <span id="problemasPorcentaje" class="text-sm font-medium text-red-500 dark:text-white">45%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div id="problemasProgressBar" class="bg-red-500 h-4 rounded-full" style="width: 40%;"></div>
+                </div>
+            </div>
+
+            <!-- Barra de progreso: Obsesión por estar informado -->
+            <div class="mb-4">
+                <div class="flex justify-between w-full">
+                    <label class="block text-green-500 dark:text-white font-semibold">Obsesión por estar
+                        informado</label>
+                    <span id="obsesionPorcentaje" class="text-sm font-medium text-green-500 dark:text-white">45%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div id="obsesionProgressBar" class="bg-green-500 h-4 rounded-full" style="width: 60%;"></div>
+                </div>
+            </div>
+
+            <!-- Barra de progreso: Necesidad por estar Conectado -->
+            <div class="mb-4">
+                <div class="flex justify-between w-full">
+                    <label class="block text-yellow-500 dark:text-white font-semibold">Necesidad por estar
+                        Conectado</label>
+                    <span id="necesidadPorcentaje"
+                        class="text-sm font-medium text-yellow-500 dark:text-white">45%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div id="necesidadProgressBar" class="bg-yellow-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda Card - Problema Principal -->
+        <div class="shadow-md rounded-lg p-6" id="cardProblemaPrincipal">
+            <h2 class="text-xl font-bold text-gray-800">Problema principal: <span class=""
+                    id="problema-principal">VARIABLE</span>
+            </h2>
+            <p class="text-gray-700 mt-2" id="descripcionProblemaPrincipal">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Vivamus lacinia odio
+                vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+        </div>
+
+        <!-- Tercera Card - Recomendaciones Generales -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800">Recomendaciones generales:</h2>
+            <p class="text-gray-700 mt-2" id="cardRecomendaciones">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Integer nec odio.
+                Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+    </div>
+
+    <script src="../src/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const storedSatisfaccion = sessionStorage.getItem('porcentajeSatisfaccion') || 0;
+            const storedProblemas = sessionStorage.getItem('porcentajeProblemas') || 0;
+            const storedObsesion = sessionStorage.getItem('porcentajeObsesion') || 0;
+            const storedNecesidad = sessionStorage.getItem('porcentajeNecesidad') || 0;
+
+            const satisfaccionProgressBar = document.getElementById('satisfaccionProgressBar');
+            const problemasProgressBar = document.getElementById('problemasProgressBar');
+            const obsesionProgressBar = document.getElementById('obsesionProgressBar');
+            const necesidadProgressBar = document.getElementById('necesidadProgressBar');
+
+
+            satisfaccionProgressBar.style.width = `${storedSatisfaccion}%`;
+            problemasProgressBar.style.width = `${storedProblemas}%`;
+            obsesionProgressBar.style.width = `${storedObsesion}%`;
+            necesidadProgressBar.style.width = `${storedNecesidad}%`;
+
+
+            const satisfaccionPorcentaje = document.getElementById('satisfaccionPorcentaje');
+            const problemasPorcentaje = document.getElementById('problemasPorcentaje');
+            const obsesionPorcentaje = document.getElementById('obsesionPorcentaje');
+            const necesidadPorcentaje = document.getElementById('necesidadPorcentaje');
+
+            satisfaccionPorcentaje.textContent = `${storedSatisfaccion}%`;
+            problemasPorcentaje.textContent = `${storedProblemas}%`;
+            obsesionPorcentaje.textContent = `${storedObsesion}%`;
+            necesidadPorcentaje.textContent = `${storedNecesidad}%`;
+
+
+            const porcentajes = [
+                { nombre: 'Satisfacción / Tolerancia', valor: storedSatisfaccion },
+                { nombre: 'Problemas', valor: storedProblemas },
+                { nombre: 'Obsesión por estar informado', valor: storedObsesion },
+                { nombre: 'Necesidad por estar conectado', valor: storedNecesidad }
+            ];
+
+            porcentajes.sort((a, b) => b.valor - a.valor);
+
+            const primerElemento = porcentajes[0];
+
+            document.getElementById('problema-principal').textContent = primerElemento.nombre;
+
+            //se selecciona el div
+            const div = document.getElementById('cardProblemaPrincipal');
+            //se selecciona el span
+            const span = document.getElementById('problema-principal');
+
+            switch (primerElemento.nombre) {
+                case 'Satisfacción / Tolerancia':
+                    div.classList.add('bg-blue-50', 'border');
+                    span.classList.add('text-blue-500');
+
+                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.';
+                    const recomendacionSatisfaccion = obtenerRecomendacionesSatisfaccion(storedSatisfaccion);
+                    break;
+
+                case 'Problemas':
+                    div.classList.add('bg-red-50', 'border');
+                    span.classList.add('text-red-500');
+
+                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La obsesión por estar informado en el contexto de las redes sociales se refiere a una necesidad compulsiva de acceder, procesar y compartir información constantemente a través de estas plataformas digitales. Este fenómeno puede estar asociado a una ansiedad social, donde el individuo siente que debe mantenerse al tanto de eventos, noticias y tendencias para no quedar desactualizado o excluido en su entorno social. La hiperconectividad y la inmediatez de la información en redes sociales fomentan un ciclo de búsqueda constante de contenido, que puede llevar a la sobrecarga informativa y a una disminución en la capacidad de concentración y reflexión crítica. Este comportamiento puede ser indicativo de una dependencia psicológica, en la que la satisfacción de la necesidad de información se convierte en un mecanismo para manejar la incertidumbre y la inseguridad personal, afectando así el bienestar emocional y las interacciones interpersonales del individuo.';
+                    const recomendacionProblemas = obtenerRecomendacionesProblemas(storedProblemas);
+                    break;
+
+                case 'Obsesión por estar informado':
+                    div.classList.add('bg-green-50', 'border');
+                    span.classList.add('text-green-500');
+
+                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.';
+                    const recomendacionObsesion = obtenerRecomendacionObsesion(storedObsesion);
+                    recomendacionObsesion
+                    break;
+
+                case 'Necesidad por estar conectado':
+
+
+                    div.classList.add('bg-yellow-50', 'border');
+                    span.classList.add('text-yellow-500');
+
+                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.';
+                    const recomendacionNecesidad = obtenerRecomendacionNecesidad(storedNecesidad);
+                    // console.log(recomendacion);
+
+                    break;
+
+                default:
+                    console.log('No hay problemas identificados.');
+                    break;
+            }
+
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
