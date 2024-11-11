@@ -1,0 +1,3 @@
+#satisfaccionProgressBar, #problemasProgressBar, #obsesionProgressBar, #necesidadProgressBar {
+    transition: width 1.5s ease;
+}
