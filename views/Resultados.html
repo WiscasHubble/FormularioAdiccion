@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta de Adicción a Redes Sociales</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/app.css">
 
 </head>
 
 <body>
 
-    <div class="container mx-auto py-10 px-4 space-y-8">
+    <div class="container mx-auto py-12 px-8 space-y-8">
         <!-- Primera Card - Resultados de Progreso -->
         <div class="bg-white shadow-md rounded-lg p-6 mt-8">
             <h2 class="text-xl font-bold text-gray-800 mb-4">Resultados del Test</h2>
@@ -20,7 +21,8 @@
             <!-- Barra de progreso: Satisfacción / Tolerancia -->
             <div class="mb-4">
                 <div class="flex justify-between w-full">
-                    <label class="block text-blue-500 dark:text-white font-semibold">Satisfacción / Tolerancia</label>
+                    <label class="block text-blue-500 dark:text-white font-semibold">Satisfacción por estar
+                        conectado</label>
                     <span id="satisfaccionPorcentaje"
                         class="text-sm font-medium text-blue-500 dark:text-white">70%</span>
                 </div>
@@ -72,17 +74,214 @@
             <h2 class="text-xl font-bold text-gray-800">Problema principal: <span class=""
                     id="problema-principal">VARIABLE</span>
             </h2>
-            <p class="text-gray-700 mt-2" id="descripcionProblemaPrincipal">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Vivamus lacinia odio
-                vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+
+            <p class="text-gray-700 mt-2 text-lg leading-relaxed p-4 rounded-md shadow-sm border-l-4 border-blue-500"
+                id="descripcionProblemaPrincipal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
+                vestibulum. Cras
+                venenatis euismod malesuada. Curabitur et quam sit amet libero fermentum scelerisque.
+            </p>
         </div>
 
         <!-- Tercera Card - Recomendaciones Generales -->
         <div class="bg-white shadow-md rounded-lg p-6">
             <h2 class="text-xl font-bold text-gray-800">Recomendaciones generales:</h2>
-            <p class="text-gray-700 mt-2" id="cardRecomendaciones">Lorem ipsum dolor sit amet, consectetur adipiscing
+            <p class="text-gray-700 mt-2" id="recomendaciones">Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Integer nec odio.
                 Praesent libero. Sed cursus ante dapibus diam.</p>
+            <div id="accordion-collapse" data-accordion="collapse" class="p-4">
+                <!-- Actividades si te gusta el deporte -->
+                <h2 id="accordion-collapse-heading-1">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-1">
+                        <span>Actividades si te gusta el deporte</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+
+                        <ul
+                            class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                Fútbol</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Gimnasio</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Yoga</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Correr</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Tenis</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Béisbol</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Baloncesto</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Rugby</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Pádel</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Golf</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 py-4">El ejercicio físico es
+                            bueno para
+                            todas las partes del cuerpo, incluida la mente. El ejercicio mejora la salud del cerebro y
+                            el
+                            aprendizaje.</h3>
+                    </div>
+                </div>
+
+                <!-- Actividades si te gusta estar en casa -->
+                <h2 id="accordion-collapse-heading-2">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-2">
+                        <span>Actividades si te gusta estar en casa</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+
+                        <ul
+                            class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">Ver
+                                alguna
+                                película, serie o programa de televisión</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Jugar juegos de
+                                mesa</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Organizar la casa
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Practicar dibujo
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Leer libros</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 py-4">Estas actividades te
+                            ayudan a
+                            despejar la mente y no sobre pensar algunas necesidades que tengas</h3>
+                    </div>
+                </div>
+
+                <!-- Actividades si te gusta socializar -->
+                <h2 id="accordion-collapse-heading-3">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-3">
+                        <span>Actividades si te gusta socializar</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+
+                        <ul
+                            class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                Practicar
+                                deporte con amigos</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Entrar a cursos
+                                de algún
+                                instrumento</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Entrar a cursos
+                                de baile</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Salir de fiesta
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Jugar videojuegos
+                                en línea
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Asistir a
+                                conciertos</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 py-4">Estas actividades,
+                            mantienen un
+                            óptimo estado de ánimo y mantienen activo el cerebro.</h3>
+                    </div>
+                </div>
+
+                <!-- Actividades si te gustan las manualidades -->
+                <h2 id="accordion-collapse-heading-4">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-4">
+                        <span>Actividades si te gustan las manualidades</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+
+                        <ul
+                            class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                Hacer
+                                manualidades</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Hacer modelos en
+                                arcilla</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Tejer</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Pintar en lienzo
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Tallar madera
+                            </li>
+                        </ul>
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 py-4">El hacer cosas con las
+                            manos te
+                            ayuda a reducir el estrés.</h3>
+                    </div>
+                </div>
+
+                <!-- Actividades si te gusta viajar -->
+                <h2 id="accordion-collapse-heading-5">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-5" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-5">
+                        <span>Actividades si te gusta viajar</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+
+                        <ul
+                            class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                Viajar a lugares
+                                turísticos</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Conocer nuevas
+                                ciudades</li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Hacer viajes en
+                                carretera
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Visitar sitios
+                                históricos
+                            </li>
+                            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Tomar fotos en
+                                los lugares
+                                visitados</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 py-4">Si te gusta viajar,
+                            explora nuevos
+                            lugares y culturas. Te ayudará a aprender y desconectar del estrés.</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -97,23 +296,25 @@
             const storedObsesion = sessionStorage.getItem('porcentajeObsesion') || 0;
             const storedNecesidad = sessionStorage.getItem('porcentajeNecesidad') || 0;
 
+            // Aqui se seleccionan las barras
             const satisfaccionProgressBar = document.getElementById('satisfaccionProgressBar');
             const problemasProgressBar = document.getElementById('problemasProgressBar');
             const obsesionProgressBar = document.getElementById('obsesionProgressBar');
             const necesidadProgressBar = document.getElementById('necesidadProgressBar');
 
-
+            // Se le añade un ancho segun el porcentaje almacenado
             satisfaccionProgressBar.style.width = `${storedSatisfaccion}%`;
             problemasProgressBar.style.width = `${storedProblemas}%`;
             obsesionProgressBar.style.width = `${storedObsesion}%`;
             necesidadProgressBar.style.width = `${storedNecesidad}%`;
 
-
+            // Se seleeciona el porcentaje numerico de cada barra
             const satisfaccionPorcentaje = document.getElementById('satisfaccionPorcentaje');
             const problemasPorcentaje = document.getElementById('problemasPorcentaje');
             const obsesionPorcentaje = document.getElementById('obsesionPorcentaje');
             const necesidadPorcentaje = document.getElementById('necesidadPorcentaje');
 
+            // Se cambia el número según el valor almacenado en sesión
             satisfaccionPorcentaje.textContent = `${storedSatisfaccion}%`;
             problemasPorcentaje.textContent = `${storedProblemas}%`;
             obsesionPorcentaje.textContent = `${storedObsesion}%`;
@@ -121,14 +322,14 @@
 
 
             const porcentajes = [
-                { nombre: 'Satisfacción / Tolerancia', valor: storedSatisfaccion },
+                { nombre: 'Satisfacción por estar conectado', valor: storedSatisfaccion },
                 { nombre: 'Problemas', valor: storedProblemas },
                 { nombre: 'Obsesión por estar informado', valor: storedObsesion },
-                { nombre: 'Necesidad por estar conectado', valor: storedNecesidad }
+                { nombre: 'Necesidad por estar Conectado', valor: storedNecesidad }
             ];
 
             porcentajes.sort((a, b) => b.valor - a.valor);
-
+            // Esta variable toma el primer valor que se encuentre en el nuevo array generado por la función (sort)
             const primerElemento = porcentajes[0];
 
             document.getElementById('problema-principal').textContent = primerElemento.nombre;
@@ -138,50 +339,44 @@
             //se selecciona el span
             const span = document.getElementById('problema-principal');
 
-            switch (primerElemento.nombre) {
-                case 'Satisfacción / Tolerancia':
-                    div.classList.add('bg-blue-50', 'border');
-                    span.classList.add('text-blue-500');
+            const recomendaciones = {
+                "Satisfacción por estar conectado": {
+                    color: 'blue',
+                    descripcion: 'La satisfacción por estar conectado a las redes sociales puede determinarse a través de la observación de ciertos comportamientos y respuestas emocionales. Un indicio clave es la experiencia de un estado de bienestar o euforia al interactuar con el contenido en línea, donde el individuo experimenta una gratificación inmediata a través de "me gusta", comentarios o interacciones sociales. Este placer puede estar asociado con la validación externa, lo que refuerza la conducta de conexión constante. Además, la persona puede mostrar un fuerte apego a la conexión continua, percibiendo la desconexión como una fuente de incomodidad o insatisfacción. La frecuencia de uso también es relevante: el individuo tiende a pasar largas horas en redes sociales, disfrutando de la sensación de estar siempre al tanto y participando activamente en la dinámica digital. Este comportamiento de búsqueda constante de gratificación a través de la conexión puede reflejar una satisfacción emocional significativa, que a menudo está vinculada a la necesidad de pertenencia social y reconocimiento público.',
+                    recomendacion: obtenerRecomendacionesSatisfaccion(storedSatisfaccion)
+                },
+                "Problemas": {
+                    color: 'red',
+                    descripcion: 'Los problemas con la conexión a redes sociales pueden determinarse mediante la observación de patrones de uso disfuncionales y los efectos negativos que estos tienen en el bienestar general del individuo. Un indicio importante es el uso excesivo de las plataformas, que interfiere con otras responsabilidades y actividades esenciales, como el trabajo, los estudios o las relaciones interpersonales. La persona puede mostrar signos de ansiedad, irritabilidad o malestar cuando no tiene acceso a las redes, lo que sugiere una dependencia emocional. Además, la falta de control sobre el tiempo de conexión, la tendencia a revisar constantemente las notificaciones o el contenido sin un propósito claro, y la interrupción de otras actividades importantes son conductas que señalan un comportamiento problemático. También se pueden observar efectos negativos en la salud mental, como síntomas de estrés, depresión o baja autoestima, derivados de comparaciones sociales o la constante búsqueda de validación en línea.',
+                    recomendacion: obtenerRecomendacionesProblemas(storedProblemas)
+                },
+                "Obsesión por estar informado": {
+                    color: 'green',
+                    descripcion: 'La obsesión por estar informado en el contexto de las redes sociales se refiere a una necesidad compulsiva de acceder, procesar y compartir información constantemente a través de estas plataformas digitales. Este fenómeno puede estar asociado a una ansiedad social, donde el individuo siente que debe mantenerse al tanto de eventos, noticias y tendencias para no quedar desactualizado o excluido en su entorno social. La hiperconectividad y la inmediatez de la información en redes sociales fomentan un ciclo de búsqueda constante de contenido, que puede llevar a la sobrecarga informativa y a una disminución en la capacidad de concentración y reflexión crítica. Este comportamiento puede ser indicativo de una dependencia psicológica, en la que la satisfacción de la necesidad de información se convierte en un mecanismo para manejar la incertidumbre y la inseguridad personal, afectando así el bienestar emocional y las interacciones interpersonales del individuo.',
+                    recomendacion: obtenerRecomendacionesObsesion(storedObsesion)
+                },
+                "Necesidad por estar Conectado": {
+                    color: 'green',
+                    descripcion: 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.',
+                    recomendacion: obtenerRecomendacionesNecesidad(storedNecesidad)
+                }
+            };
 
-                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.';
-                    const recomendacionSatisfaccion = obtenerRecomendacionesSatisfaccion(storedSatisfaccion);
-                    break;
+            const categoria = recomendaciones[primerElemento.nombre];
 
-                case 'Problemas':
-                    div.classList.add('bg-red-50', 'border');
-                    span.classList.add('text-red-500');
+            if (categoria) {
+                // Asignar clases de color basadas en la categoría
+                div.classList.add(`bg-${categoria.color}-50`, 'border');
+                span.classList.add(`text-${categoria.color}-500`);
 
-                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La obsesión por estar informado en el contexto de las redes sociales se refiere a una necesidad compulsiva de acceder, procesar y compartir información constantemente a través de estas plataformas digitales. Este fenómeno puede estar asociado a una ansiedad social, donde el individuo siente que debe mantenerse al tanto de eventos, noticias y tendencias para no quedar desactualizado o excluido en su entorno social. La hiperconectividad y la inmediatez de la información en redes sociales fomentan un ciclo de búsqueda constante de contenido, que puede llevar a la sobrecarga informativa y a una disminución en la capacidad de concentración y reflexión crítica. Este comportamiento puede ser indicativo de una dependencia psicológica, en la que la satisfacción de la necesidad de información se convierte en un mecanismo para manejar la incertidumbre y la inseguridad personal, afectando así el bienestar emocional y las interacciones interpersonales del individuo.';
-                    const recomendacionProblemas = obtenerRecomendacionesProblemas(storedProblemas);
-                    break;
+                // Establecer la descripción del problema
+                document.getElementById('descripcionProblemaPrincipal').textContent = categoria.descripcion;
 
-                case 'Obsesión por estar informado':
-                    div.classList.add('bg-green-50', 'border');
-                    span.classList.add('text-green-500');
-
-                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La obsesión por estar informado en el contexto de las redes sociales se refiere a una necesidad compulsiva de acceder, procesar y compartir información constantemente a través de estas plataformas digitales. Este fenómeno puede estar asociado a una ansiedad social, donde el individuo siente que debe mantenerse al tanto de eventos, noticias y tendencias para no quedar desactualizado o excluido en su entorno social. La hiperconectividad y la inmediatez de la información en redes sociales fomentan un ciclo de búsqueda constante de contenido, que puede llevar a la sobrecarga informativa y a una disminución en la capacidad de concentración y reflexión crítica. Este comportamiento puede ser indicativo de una dependencia psicológica, en la que la satisfacción de la necesidad de información se convierte en un mecanismo para manejar la incertidumbre y la inseguridad personal, afectando así el bienestar emocional y las interacciones interpersonales del individuo.';
-                    const recomendacionObsesion = obtenerRecomendacionObsesion(storedObsesion);
-                    recomendacionObsesion
-                    break;
-
-                case 'Necesidad por estar conectado':
-
-
-                    div.classList.add('bg-yellow-50', 'border');
-                    span.classList.add('text-yellow-500');
-
-                    document.getElementById('descripcionProblemaPrincipal').textContent = 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.';
-                    const recomendacionNecesidad = obtenerRecomendacionNecesidad(storedNecesidad);
-                    // console.log(recomendacion);
-
-                    break;
-
-                default:
-                    console.log('No hay problemas identificados.');
-                    break;
+                // Asignar la recomendación
+                document.getElementById('recomendaciones').innerHTML = categoria.recomendacion.estructuraHtml;
+            } else {
+                console.log('No se encontró una categoría')
             }
-
-
 
         });
 
