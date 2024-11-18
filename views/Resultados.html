@@ -81,6 +81,9 @@
                 vestibulum. Cras
                 venenatis euismod malesuada. Curabitur et quam sit amet libero fermentum scelerisque.
             </p>
+
+            <p class="text-blue-700 mt-2 p-2" id="referencias"></p>
+
         </div>
 
         <!-- Tercera Card - Recomendaciones Generales -->
@@ -342,29 +345,86 @@
             const recomendaciones = {
                 "Satisfacción por estar conectado": {
                     color: 'blue',
-                    descripcion: 'La satisfacción por estar conectado a las redes sociales puede determinarse a través de la observación de ciertos comportamientos y respuestas emocionales. Un indicio clave es la experiencia de un estado de bienestar o euforia al interactuar con el contenido en línea, donde el individuo experimenta una gratificación inmediata a través de "me gusta", comentarios o interacciones sociales. Este placer puede estar asociado con la validación externa, lo que refuerza la conducta de conexión constante. Además, la persona puede mostrar un fuerte apego a la conexión continua, percibiendo la desconexión como una fuente de incomodidad o insatisfacción. La frecuencia de uso también es relevante: el individuo tiende a pasar largas horas en redes sociales, disfrutando de la sensación de estar siempre al tanto y participando activamente en la dinámica digital. Este comportamiento de búsqueda constante de gratificación a través de la conexión puede reflejar una satisfacción emocional significativa, que a menudo está vinculada a la necesidad de pertenencia social y reconocimiento público.',
-                    recomendacion: obtenerRecomendacionesSatisfaccion(storedSatisfaccion)
+                    descripcion: 'La satisfacción por estar conectado a las redes sociales puede determinarse a través de la observación de ciertos comportamientos y respuestas emocionales. Un indicio clave es la experiencia de un estado de bienestar o euforia al interactuar con el contenido en línea, donde el individuo experimenta una gratificación inmediata a través de "me gusta", comentarios o interacciones sociales. Este placer puede estar asociado con la validación externa, lo que refuerza la conducta de conexión constante. Además, la persona puede mostrar un fuerte apego a la conexión continua, percibiendo la desconexión como una fuente de incomodidad o insatisfacción. La frecuencia de uso también es relevante: el individuo tiende a pasar largas horas en redes sociales, disfrutando de la sensación de estar siempre al tanto y participando activamente en la dinámica digital. Este comportamiento de búsqueda constante de gratificación a través de la conexión puede reflejar una satisfacción emocional significativa, que a menudo está vinculada a la necesidad de pertenencia social y reconocimiento público. Para más detalles, puedes consultar las fuentes citadas posteriormente:',
+                    recomendacion: obtenerRecomendacionesSatisfaccion(storedSatisfaccion),
+                    referencias: [
+                        {
+                            texto: 'Clínica Alemana: Consejos para superar la adicción a redes sociales',
+                            url: 'https://www.clinicauandes.cl/noticia/consejos-para-superar-la-adiccion-a-las-redes-sociales'
+                        },
+                        {
+                            texto: 'Adicción a las nuevas tecnologías - Investe',
+                            url: 'https://investe.es/blog/adiccion-a-las-nuevas-tecnologias-2/'
+                        },
+                        {
+                            texto: '6 consejos para evitar la adicción a redes sociales - Conecta Tec',
+                            url: 'https://conecta.tec.mx/es/noticias/nacional/salud/6-consejos-para-evitar-la-adiccion-redes-sociales'
+                        }
+                    ]
                 },
                 "Problemas": {
                     color: 'red',
-                    descripcion: 'Los problemas con la conexión a redes sociales pueden determinarse mediante la observación de patrones de uso disfuncionales y los efectos negativos que estos tienen en el bienestar general del individuo. Un indicio importante es el uso excesivo de las plataformas, que interfiere con otras responsabilidades y actividades esenciales, como el trabajo, los estudios o las relaciones interpersonales. La persona puede mostrar signos de ansiedad, irritabilidad o malestar cuando no tiene acceso a las redes, lo que sugiere una dependencia emocional. Además, la falta de control sobre el tiempo de conexión, la tendencia a revisar constantemente las notificaciones o el contenido sin un propósito claro, y la interrupción de otras actividades importantes son conductas que señalan un comportamiento problemático. También se pueden observar efectos negativos en la salud mental, como síntomas de estrés, depresión o baja autoestima, derivados de comparaciones sociales o la constante búsqueda de validación en línea.',
-                    recomendacion: obtenerRecomendacionesProblemas(storedProblemas)
+                    descripcion: 'Los problemas con la conexión a redes sociales pueden determinarse mediante la observación de patrones de uso disfuncionales y los efectos negativos que estos tienen en el bienestar general del individuo. Un indicio importante es el uso excesivo de las plataformas, que interfiere con otras responsabilidades y actividades esenciales, como el trabajo, los estudios o las relaciones interpersonales. La persona puede mostrar signos de ansiedad, irritabilidad o malestar cuando no tiene acceso a las redes, lo que sugiere una dependencia emocional. Además, la falta de control sobre el tiempo de conexión, la tendencia a revisar constantemente las notificaciones o el contenido sin un propósito claro, y la interrupción de otras actividades importantes son conductas que señalan un comportamiento problemático. También se pueden observar efectos negativos en la salud mental, como síntomas de estrés, depresión o baja autoestima, derivados de comparaciones sociales o la constante búsqueda de validación en línea. Para más detalles, puedes consultar las fuentes citadas posteriormente:',
+                    recomendacion: obtenerRecomendacionesProblemas(storedProblemas),
+                    referencias: [
+                        {
+                            texto: 'Clínica Alemana: Consejos para superar la adicción a redes sociales',
+                            url: 'https://www.clinicauandes.cl/noticia/consejos-para-superar-la-adiccion-a-las-redes-sociales'
+                        },
+                        {
+                            texto: 'Adicción a las nuevas tecnologías - Investe',
+                            url: 'https://investe.es/blog/adiccion-a-las-nuevas-tecnologias-2/'
+                        },
+                        {
+                            texto: '6 consejos para evitar la adicción a redes sociales - Conecta Tec',
+                            url: 'https://conecta.tec.mx/es/noticias/nacional/salud/6-consejos-para-evitar-la-adiccion-redes-sociales'
+                        }
+                    ]
                 },
                 "Obsesión por estar informado": {
                     color: 'green',
-                    descripcion: 'La obsesión por estar informado en el contexto de las redes sociales se refiere a una necesidad compulsiva de acceder, procesar y compartir información constantemente a través de estas plataformas digitales. Este fenómeno puede estar asociado a una ansiedad social, donde el individuo siente que debe mantenerse al tanto de eventos, noticias y tendencias para no quedar desactualizado o excluido en su entorno social. La hiperconectividad y la inmediatez de la información en redes sociales fomentan un ciclo de búsqueda constante de contenido, que puede llevar a la sobrecarga informativa y a una disminución en la capacidad de concentración y reflexión crítica. Este comportamiento puede ser indicativo de una dependencia psicológica, en la que la satisfacción de la necesidad de información se convierte en un mecanismo para manejar la incertidumbre y la inseguridad personal, afectando así el bienestar emocional y las interacciones interpersonales del individuo.',
-                    recomendacion: obtenerRecomendacionesObsesion(storedObsesion)
+                    descripcion: 'La obsesión por estar informado en el contexto de las redes sociales se refiere a una necesidad compulsiva de acceder, procesar y compartir información constantemente a través de estas plataformas digitales. Este fenómeno puede estar asociado a una ansiedad social, donde el individuo siente que debe mantenerse al tanto de eventos, noticias y tendencias para no quedar desactualizado o excluido en su entorno social. La hiperconectividad y la inmediatez de la información en redes sociales fomentan un ciclo de búsqueda constante de contenido, que puede llevar a la sobrecarga informativa y a una disminución en la capacidad de concentración y reflexión crítica. Este comportamiento puede ser indicativo de una dependencia psicológica, en la que la satisfacción de la necesidad de información se convierte en un mecanismo para manejar la incertidumbre y la inseguridad personal, afectando así el bienestar emocional y las interacciones interpersonales del individuo. Para más detalles, puedes consultar las fuentes citadas posteriormente:',
+                    recomendacion: obtenerRecomendacionesObsesion(storedObsesion),
+                    referencias: [
+                        {
+                            texto: 'Clínica Alemana: Consejos para superar la adicción a redes sociales',
+                            url: 'https://www.clinicauandes.cl/noticia/consejos-para-superar-la-adiccion-a-las-redes-sociales'
+                        },
+                        {
+                            texto: 'Adicción a las nuevas tecnologías - Investe',
+                            url: 'https://investe.es/blog/adiccion-a-las-nuevas-tecnologias-2/'
+                        },
+                        {
+                            texto: '6 consejos para evitar la adicción a redes sociales - Conecta Tec',
+                            url: 'https://conecta.tec.mx/es/noticias/nacional/salud/6-consejos-para-evitar-la-adiccion-redes-sociales'
+                        }
+                    ]
                 },
                 "Necesidad por estar Conectado": {
                     color: 'green',
-                    descripcion: 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo.',
-                    recomendacion: obtenerRecomendacionesNecesidad(storedNecesidad)
+                    descripcion: 'La necesidad por estar conectado en el contexto de las redes sociales se refiere a un impulso psicológico que lleva a los individuos a buscar constantemente la interacción y la validación a través de plataformas digitales. Este fenómeno puede ser entendido como un comportamiento de apego hacia las redes, donde la conexión virtual se convierte en una fuente primaria de satisfacción emocional y social. La presencia constante en estas plataformas puede inducir un estado de dependencia, caracterizado por la necesidad de recibir retroalimentación inmediata, como "me gusta" y comentarios, lo cual activa circuitos de recompensa en el cerebro asociados con la dopamina. Esta necesidad puede manifestarse en síntomas de ansiedad, irritabilidad y desinterés por actividades offline, contribuyendo a un ciclo de interacción compulsiva que afecta el bienestar psicológico y social del individuo. Para más detalles, puedes consultar las fuentes citadas posteriormente:',
+                    recomendacion: obtenerRecomendacionesNecesidad(storedNecesidad),
+                    referencias: [
+                        {
+                            texto: 'Clínica Alemana: Consejos para superar la adicción a redes sociales',
+                            url: 'https://www.clinicauandes.cl/noticia/consejos-para-superar-la-adiccion-a-las-redes-sociales'
+                        },
+                        {
+                            texto: 'Adicción a las nuevas tecnologías - Investe',
+                            url: 'https://investe.es/blog/adiccion-a-las-nuevas-tecnologias-2/'
+                        },
+                        {
+                            texto: '6 consejos para evitar la adicción a redes sociales - Conecta Tec',
+                            url: 'https://conecta.tec.mx/es/noticias/nacional/salud/6-consejos-para-evitar-la-adiccion-redes-sociales'
+                        }
+                    ]
                 }
             };
 
             const categoria = recomendaciones[primerElemento.nombre];
 
             if (categoria) {
+
                 // Asignar clases de color basadas en la categoría
                 div.classList.add(`bg-${categoria.color}-50`, 'border');
                 span.classList.add(`text-${categoria.color}-500`);
@@ -374,6 +434,19 @@
 
                 // Asignar la recomendación
                 document.getElementById('recomendaciones').innerHTML = categoria.recomendacion.estructuraHtml;
+
+                const referencias = document.getElementById('referencias');
+                if (categoria.referencias && categoria.referencias.length > 0) {
+                    categoria.referencias.forEach(ref => {
+                        const enlace = document.createElement('a');
+                        enlace.href = ref.url;
+                        enlace.className = `flex py-2 text-${categoria.color}-500 `;
+                        enlace.textContent = ref.texto;
+                        enlace.target = '_blank'; // Abrir en una nueva pestaña
+                        referencias.appendChild(enlace);
+                    });
+                }
+
             } else {
                 console.log('No se encontró una categoría')
             }
